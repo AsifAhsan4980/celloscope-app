@@ -1,0 +1,13 @@
+<div style="display: flex; justify-content: center">
+  <form class="example-form">
+    <mat-form-field  appearance="outline" #formField="matFormField">
+      <mat-label>{{ 'search'  }}</mat-label>
+      <input matInput placeholder="Search Items" style="margin-top: 10px" type="text" name="searchKey"  [(ngModel)]="searchKey"  >
+    </mat-form-field>
+    <button mat-raised-button color="primary" style="margin-left: 5px" (click)="searchData()">Search</button>
+    <button mat-raised-button color="primary" style="margin-left: 5px" (click)="resetData()">Reset</button>
+  </form>
+
+</div>
+<p *ngIf="message" style="color: red;display: flex; justify-content: center">{{message}}</p>
+

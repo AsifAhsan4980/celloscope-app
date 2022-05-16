@@ -1,0 +1,24 @@
+<h1>All Data</h1>
+<mat-grid-list cols="5" rowHeight="5:7">
+<!--  <mat-paginator [length]="100"-->
+<!--                 [pageSize]="10"-->
+<!--                 [pageSizeOptions]="[5, 10, 25, 100]"-->
+<!--                 aria-label="Select page">-->
+<!--  </mat-paginator>-->
+  <div *ngFor="let data of dataArray">
+    <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title style="display: flex; justify-content: space-evenly ; margin-top: 5px">{{data.login}}</mat-card-title>
+          <mat-chip-list>
+            <mat-chip color="primary" selected>{{data.type}}</mat-chip>
+          </mat-chip-list>
+        </mat-card-header>
+        <div style="display: flex; justify-content: space-evenly ;white-space: pre-wrap">
+        </div>
+       <img mat-card-image src="{{data.avatar_url}}" alt="{{data.login}}">
+      </mat-card>
+    </mat-grid-tile>
+  </div>
+
+</mat-grid-list>
