@@ -3,4 +3,5 @@ export const environment = {
   production: true,
   useHash: true,
   hmr: false,
+  apiUrl: 'https://api.github.com/',
 };
